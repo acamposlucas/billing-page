@@ -1,9 +1,11 @@
+import { BillingPage } from "./components/BillingPage";
+
 function App() {
-    return (
+  return (
     <>
-      <h1>Hello</h1>
+      <BillingPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
