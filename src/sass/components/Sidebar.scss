@@ -1,0 +1,40 @@
+@use "../variables/colors";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2.5rem;
+  padding-block: 3.75rem 2rem;
+  background-color: colors.$white;
+}
+
+.userContainer {
+  display: flex;
+  gap: 0.875rem;
+
+  .userContainer__img {
+    border-radius: 18px;
+    height: 55px;
+    width: 55px;
+  }
+
+  .userContainer__userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    strong,
+    a {
+      color: colors.$navy;
+    }
+
+    a {
+      font-size: 0.875rem;
+      text-decoration: none;
+
+      &:visited {
+        color: colors.$navy;
+      }
+    }
+  }
+}
