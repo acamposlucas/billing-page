@@ -8,21 +8,31 @@ export default function Sidebar() {
         <img src={userImg} alt="" className="userContainer__avatar" />
         <div className="userContainer__userInfo">
           <strong>Ildiko Gaspar</strong>
-          <span>
-            <a href="">@igaspar</a>
-          </span>
+          <a href="">@igaspar</a>
         </div>
       </div>
-      <nav>
-        <ul>
-          <li>General</li>
-          <li>Password</li>
-          <li>Invitations</li>
-          <li>Billings</li>
-          <li>Apps</li>
+      <nav className="sidebar__nav">
+        <ul className="nav__list">
+          <li className="nav__list__item">
+            <a href="#">General</a>
+          </li>
+          <li className="nav__list__item">
+            <a href="#">Password</a>
+          </li>
+          <li className="nav__list__item">
+            <a href="#">Invitations</a>
+          </li>
+          <li className="nav__list__item">
+            <a href="#">Billings</a>
+          </li>
+          <li className="nav__list__item">
+            <a href="#">Apps</a>
+          </li>
         </ul>
       </nav>
-      <a href="">Log out</a>
+      <a href="" className="sidebar__logOutButton">
+        Log out
+      </a>
     </aside>
   );
 }

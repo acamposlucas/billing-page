@@ -1,11 +1,14 @@
 @use "../variables/colors";
 
 .sidebar {
+  background-color: colors.$white;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
   padding-inline: 2.5rem;
   padding-block: 3.75rem 2rem;
-  background-color: colors.$white;
+  height: 100%;
 }
 
 .userContainer {
@@ -22,19 +25,78 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
 
-    strong,
-    a {
+    strong {
       color: colors.$navy;
     }
 
     a {
       font-size: 0.875rem;
-      text-decoration: none;
 
       &:visited {
         color: colors.$navy;
       }
     }
   }
+}
+
+.sidebar__nav {
+  flex: 1;
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style-type: none;
+  }
+
+  .nav__list__item,
+  .sidebar__logOutButton {
+    align-items: center;
+    display: flex;
+    gap: 0.625rem;
+  }
+
+  .nav__list__item:before,
+  .sidebar__logOutButton:before {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+  }
+
+  .nav__list__item:nth-child(1):before {
+    background-image: url("../../assets/general.svg");
+  }
+  .nav__list__item:nth-child(2):before {
+    background-image: url("../../assets/locker.svg");
+  }
+  .nav__list__item:nth-child(3):before {
+    background-image: url("../../assets/mail.svg");
+  }
+  .nav__list__item:nth-child(4):before {
+    background-image: url("../../assets/billings.svg");
+  }
+  .nav__list__item:nth-child(5):before {
+    background-image: url("../../assets/apps.svg");
+  }
+}
+
+.sidebar__logOutButton {
+  align-items: center;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.sidebar__logOutButton:before {
+  background-image: url("../../assets/logout.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  display: inline-block;
+  height: 32px;
+  width: 32px;
 }
